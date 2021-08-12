@@ -62,3 +62,7 @@ button {
     background-color: lightgrey;
     color: black;
 }
+.center-box {
+    margin-top: 100px;
+    margin: auto;
+}

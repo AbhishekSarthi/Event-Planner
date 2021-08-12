@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 const Register = () => {
     const [name, setName] = useState('');
@@ -31,14 +32,15 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
-
-            <button
-                onClick={() => {
-                    SubmitBtn();
-                }}
-            >
-                Submit
-            </button>
+            <Link to="/read">
+                <button
+                    onClick={() => {
+                        SubmitBtn();
+                    }}
+                >
+                    Submit
+                </button>
+            </Link>
         </div>
     );
 };

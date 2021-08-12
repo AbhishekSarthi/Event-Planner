@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 const Create = () => {
     const [title, setTitle] = useState('');
@@ -29,14 +30,15 @@ const Create = () => {
 
             <h3>Author : </h3>
             <input onChange={(e) => setAuthor(e.target.value)} value={author} />
-
-            <button
-                onClick={() => {
-                    SubmitBtn();
-                }}
-            >
-                Submit
-            </button>
+            <Link to="/read">
+                <button
+                    onClick={() => {
+                        SubmitBtn();
+                    }}
+                >
+                    Submit
+                </button>
+            </Link>
         </>
     );
 };

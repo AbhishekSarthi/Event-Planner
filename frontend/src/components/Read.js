@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 const Read = () => {
     const [events, setEvents] = useState([]);
@@ -24,6 +25,9 @@ const Read = () => {
                     </div>
                 );
             })}
+            <Link to="/create">
+                <h3 className="small-box center-box">Add event </h3>
+            </Link>
         </div>
     );
 };
