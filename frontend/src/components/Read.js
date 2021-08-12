@@ -4,6 +4,11 @@ import axios from 'axios';
 const Read = () => {
     const [events, setEvents] = useState([]);
 
+    // const eventDelete = async (data) => {
+    //     console.log(data);
+    //     await axios.patch('/api/delete', data);
+    // };
+
     useEffect(() => {
         const getData = async () => {
             const { data } = await axios.get('/api');
@@ -22,6 +27,14 @@ const Read = () => {
                         <h4>title : {singleEvent.title}</h4>
                         <h4>Body : {singleEvent.body} </h4>
                         <h4>author : {singleEvent.author}</h4>
+                        {/* <button
+                            className="small-box"
+                            onClick={() => {
+                                eventDelete(singleEvent);
+                            }}
+                        >
+                            Delete
+                        </button> */}
                     </div>
                 );
             })}
